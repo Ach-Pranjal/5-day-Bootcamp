@@ -1,6 +1,0 @@
-insert into courses (course_name, credits, department_id) values ('English', 4, 01), ('Nepali', 4, 02), ('Mathematics', 4, 03), ('Physics', 4, 04);
-insert into students (first_name, last_name, email) values ('Ram', 'Maharjan', 'rammhrz@gmail.com'), ('Shyam', 'Maharjan', 'shyammhrz@gmail.com'), ('Hari', 'Shrestha', 'harishrsts@gmail.com'), ('Ghana', 'Maharjan', 'mhrzzzghanan@gmail.com');
-
-insert into departments (department_name) values ('English Department'), ('Nepali Department'), ('Mathematics Department'), ('Physics Department');
-
-insert into enrollments (student_id, course_id, grade) values (1,1,11), (2,2,11), (3,3,12), (4,4,12);
