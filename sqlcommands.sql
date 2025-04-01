@@ -1,30 +1,39 @@
+-- DAY 1 DATA
+
 CREATE DATABASE student_management;
 
+CREATE TABLE IF NOT EXISTS teachers (
+  teacher_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  age INT NOT NULL
+);
+
 CREATE TABLE students (
-  student_id serial primary key,
-  first_name varchar(100) not null,
-  last_name varchar(100) not null,
-  email varchar(100) unique,
-  enrollment_date date default current_date
+  student_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE
 );
 
 CREATE TABLE courses (
-  course_id Serial primary key,
-  course_name varchar(100) not null,
-  department_id int,
-  credits int not null
+  course_id SERIAL PRIMARY KEY,
+  course_name VARCHAR(100) NOT NULL,
+  department_id INT REFERENCES departments(department_id) ON DELETE CASCADE,
+  credits INT NOT NULL,
+  teacher_id INT REFERENCES teachers(teacher_id) ON DELETE CASCADE
 );
 
 CREATE TABLE enrollments (
-  enrollment_id serial primary key,
-  student_id int references students(student_id) on delete cascade,
-  course_id int references courses(course_id) on delete cascade,
-  grade varchar(2)
+  enrollment_id SERIAL PRIMARY KEY,
+  student_id INT REFERENCES students(student_id) ON DELETE CASCADE,
+  course_id INT REFERENCES courses(course_id) ON DELETE CASCADE,
+  grade CHAR(2) NOT NULL
 );
 
 CREATE TABLE departments (
-  department_id serial primary key,
-  department_name varchar(100) not null
+  department_id SERIAL PRIMARY KEY,
+  department_name VARCHAR(100) NOT NULL
 );
 
 -- Insert data into departments
