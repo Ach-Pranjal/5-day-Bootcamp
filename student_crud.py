@@ -1,3 +1,5 @@
+### DAY 2 CRUD OPERATIONS WITH THE HELP OF PYTHON AND psycopg2
+
 # Import; package installed from pip
 import psycopg2
 

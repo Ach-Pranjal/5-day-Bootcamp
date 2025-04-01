@@ -1,4 +1,4 @@
--- DAY 1 DATA
+-- DAY 1 LEARNING BASIC SQL COMMANDS
 
 CREATE DATABASE student_management;
 
