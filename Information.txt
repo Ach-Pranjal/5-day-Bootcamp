@@ -36,6 +36,8 @@ fix migration by running make migration
             path('students/', include("students.urls"))
         ]
 
+            path(url for dashboard, which one to reference)
+
     make model
         models.model automatically includes the id
 
@@ -47,5 +49,10 @@ fix migration by running make migration
         from django.contrib import admin
         from student.models import Student
 
+
+
         # Register your models here.
-        admin.site.register(Student)`
+        admin.site.register(Student)
+
+MAKES USE OF MVT (MODEL VIEW TEMPLATE)
+PHP MAKES USE OF MVC (MODEL VIEW CONTROLLER)
