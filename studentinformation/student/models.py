@@ -41,6 +41,9 @@ class Enrollment(models.Model):
         ('IP', 'In Progress'),
     )
 
+    def __str__(self):
+        return f"{self.student} - {self.course} - {self.enrollment_date} - {self.grade}"
+
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     enrollment_date = models.DateField(auto_now_add=True)
