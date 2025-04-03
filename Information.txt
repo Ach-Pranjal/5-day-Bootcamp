@@ -21,3 +21,38 @@ fix migration by running make migration
         chaoticemperor2@gmail.com
         Leucotic
         
+    startapp
+
+    add the new app to settings.py app
+
+    include urls.py in student with empty file
+
+    include student.urls in urls.py
+        from django.contrib import admin
+        from django.urls import path, include
+
+        urlpatterns = [
+            path('admin/', admin.site.urls),
+            path('students/', include("students.urls"))
+        ]
+
+            path(url for dashboard, which one to reference)
+
+    make model
+        models.model automatically includes the id
+
+    makemigration
+
+    sqlmigrate students 0001
+
+    make admin.py
+        from django.contrib import admin
+        from student.models import Student
+
+
+
+        # Register your models here.
+        admin.site.register(Student)
+
+MAKES USE OF MVT (MODEL VIEW TEMPLATE)
+PHP MAKES USE OF MVC (MODEL VIEW CONTROLLER)
